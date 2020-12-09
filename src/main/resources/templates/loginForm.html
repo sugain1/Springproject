@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="login">
+  <div class="login-triangle"></div>
+  
+  <h2 class="login-header">Log in</h2>
+
+  <form action="userlogin" method="post" class="login-container">
+    <p th:text="${msg}"> </p>
+    <p><input type="text" placeholder="username" name = "username"></p>
+    <p><input type="password" placeholder="Password" name ="password"></p>
+     <div class="g-recaptcha" data-sitekey="6Le5jPEZAAAAAF40NYiW2tRGrElrDCO_5fzES814"></div>
+    <p><input type="submit" value="Log in"></p>
+	<a href = "/facebook"> Login with Facebook</a>
+	</span> <br><br>
+	<a href="/userSignup">Register</a>  
+  </form>
+</div>
+
+</body>
+</html>

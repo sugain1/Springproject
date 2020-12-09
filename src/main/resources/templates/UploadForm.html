@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<div th:insert="header.html">
+
+  </div>
+
+<form action="upload" method = "post" enctype="multipart/form-data" > 
+select image  <input type ="file" name = "file" >   
+<input type = "submit" value = "upload">
+
+
+</form>
+<span th:text = "${msg}">
+
+</span>
+
+</body>
+</html>

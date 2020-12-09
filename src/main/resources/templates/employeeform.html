@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body >
+<div th:insert="header.html">
+  
+  </div>
+  
+  
+  <form th:action="@{/employee}" th:object="${emodel}" method="post">
+  
+  <table>
+     <tr>
+		<td>FirstName</td>
+		<td><input type="text"  th:field="*{fname}"></td>	     
+     </tr>
+     
+     <tr>
+		<td>LastName</td>
+		<td><input type="text"  th:field="*{lname}"></td>	     
+     </tr>
+
+<tr>
+		<td>Gender</td>
+		<td>
+		    <input type="radio" th:field="*{gender}" th:value="male"> Male
+			<input type="radio" th:field="*{gender}" th:value="female"> Female
+		</td>	     
+     </tr>
+  
+  
+  <tr>
+		<td>Phone</td>
+		<td><input type="text"  th:field="*{phone}"></td>	     
+     </tr>
+  
+  <tr>
+		<td>email</td>
+		<td><input type="text"  th:field="*{email}"></td>	     
+     </tr>
+  
+  <tr>
+		<td>company</td>
+		<td><input type="text"  th:field="*{company}"></td>	     
+     </tr>
+  
+
+<tr>
+		<td>Post</td>
+		<td><input type="text"  th:field="*{post}"></td>	     
+     </tr>
+
+<tr>
+		<td>salary</td>
+		<td><input type="number"  th:field="*{salary}"></td>	     
+     </tr>
+
+<tr>
+		<td>Date of birth</td>
+		<td><input type="date"  th:field="*{dob}"></td>	     
+     </tr>
+
+<tr>
+		<td>Joining date</td>
+		<td><input type="date"  th:field="*{joiningdate}"></td>	     
+     </tr>
+
+<tr>
+		<td>Country</td>
+		<td><input type="text"  th:field="*{address.country}"></td>	     
+     </tr>
+
+<tr>
+		<td>City</td>
+		<td><input type="text"  th:field="*{address.city}"></td>	     
+     </tr>
+
+<tr>
+		<td>State</td>
+		 
+	<td>	 
+		   <select th:field="*{address.state}">
+		   
+		    <option  value =""   >---select---- </option>
+		    <option value="state-1">State-1</option>
+		    <option value="state-2">State-2</option>
+		    <option value="state-3">State-3</option>
+		    <option value="state-4">State-4</option>
+		    <option value="state-5">State-5</option>
+		    <option value="state-6">State-6</option>
+		    <option value="state-7">State-7</option>
+		    </select>		 
+		 </td>     
+     </tr>
+
+<tr>
+		<td>zip</td>
+		<td><input type="text"  th:field="*{address.zip}"></td>	     
+     </tr>
+
+<tr>
+		<td><input type="submit"  value = "save"></td>	     
+     </tr>
+
+
+  </table>
+  
+  
+  
+  </form>
+
+</body>
+</html>
